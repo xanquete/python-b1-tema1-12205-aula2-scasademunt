@@ -42,9 +42,14 @@ Exemple:
 '''
 
 def sum_odd_numbers(list_numbers):
-    # Write here your code
-    pass
-
+  suma_senars = 0
+  for nombre in list_numbers:
+    if not isinstance(nombre, (int)) or nombre < 0:
+        raise ValueError("Error: El valor no és numèric o és més petit que zero.")
+    else:
+       if nombre % 2 != 0:
+          suma_senars = suma_senars + nombre
+  return(suma_senars)      
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(sum_odd_numbers([1, 2, 3, 4, 5, 10, 21, 100]))
+print(sum_odd_numbers([1, 2, 3, 4, 5, 10, 21, 100]))
