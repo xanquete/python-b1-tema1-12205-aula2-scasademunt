@@ -66,7 +66,13 @@ import numpy as np
 
 def results(list_numbers):
     # Write here your code
-    pass
+    mitjana = round(np.mean(list_numbers),2)
+    desviacio = round(np.std(list_numbers),2)
+
+    print(f"Average: {mitjana}")
+    print(f"Standard deviation: {desviacio}")
+
+    return(mitjana,desviacio)
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
